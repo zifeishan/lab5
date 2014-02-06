@@ -10,7 +10,9 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$('.friend a').click(ClickFriend);
+	// $('.friend a').click(ClickFriend);
+	$('.profilefriend a').click(ClickFriend);
+	
 }
 
 function anagrammedName(name) {
@@ -48,10 +50,11 @@ function anagrammedName(name) {
 
 function ClickFriend(e) {
   // $(this).text('Scott Cheng');
+  
   $(this).text(anagrammedName($(this).text()));
-
   e.preventDefault()
+
   // e.stopPropagation() // Prevent event going on to next handler (a href="#"). 
-  // return false;  // Do both preventDefault and stopPropagation
+  return false;  // Do both preventDefault and stopPropagation
 }
 

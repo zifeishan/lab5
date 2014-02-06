@@ -8,7 +8,8 @@ exports.addFriend = function(req, res) { 
   var newfriend = {
     name: req.query.name,
     description: req.query.description,
-    imageURL: "http://lorempixel.com/400/400/people"
+    imageURL: "http://lorempixel.com/400/400/people",
+    friends: []
   }
   res.render('add', {
    friends: [newfriend]

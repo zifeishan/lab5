@@ -14,6 +14,7 @@ var index = require('./routes/index');
 
 // allow a new route to add friends
 var add = require('./routes/add');
+var profile = require('./routes/profile');
 
 var app = express();
 
@@ -42,7 +43,10 @@ app.get('/', index.view);
 // Example route
 // app.get('/users', user.list);
 // Register "localhost:3000/add" url here
-app.get('/add', add.addFriend)
+app.get('/add', add.addFriend);
+app.get('/profile', profile.view);
+// app.get('/addProfile', profile.addFriendProfile);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

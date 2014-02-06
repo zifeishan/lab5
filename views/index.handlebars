@@ -25,17 +25,21 @@
 
   	<h1>My HCI Friends</h1>
 
-    {{#each friends}}
-    <div class="row friend">
-      <div class="col-md-3 thumbnail">
-        <img class="img-responsive img-rounded" src="{{imageURL}}"></img>
+    
+    <div class="row">
+      {{#each friends}}
+      <div class="col-md-6">
+        <div class="col-md-4 thumbnail">
+          <img class="img-responsive img-rounded" src="{{imageURL}}"></img>
+        </div>
+        <div class="col-md-8">
+          <h3><a href="/profile?name={{name}}">{{name}}</a></h3>
+          <p>{{description}}</p>
+        </div>
       </div>
-      <div class="col-md-9">
-        <h3><a href="#">{{name}}</a></h3>
-        <p>{{description}}</p>
-      </div>
+      {{/each}}
     </div>
-    {{/each}}
+    
 
     
 
